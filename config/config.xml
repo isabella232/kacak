@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<domain-admin>
+        <domain>
+                <name>WORKGROUP</name>
+                <username>Administrator</username>
+                <password>Test123</password>
+                <threads>10</threads>
+        </domain>
+        <domain>
+                <name>Sirket</name>
+                <username>Saldirgan</username>
+                <password>Aa123456</password>
+                <threads>10</threads>
+        </domain>
+</domain-admin>
