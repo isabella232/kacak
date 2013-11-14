@@ -5,23 +5,28 @@ kacak
 
 Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin asagidaki adimlar takip edilmelidir.
 
-apt-get install msgpack-python\n
+apt-get install msgpack-python
+
 wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
  
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 cd msfrpc-master/python-msfrpc
+
 python setup.py install
  
 
 Gerekli paketlerin sisteme kurulmasinin ardindan msfrpc servisinin baslatilmasi gereklidir. Bunun icin paket ile birlikte gelen msfrpcd.sh betigi kullanilabilir. Msfrpc servisinin baslatilmasi icin betik asagida belirtildigi sekilde calistirilmalidir.
 
 ./msfrpcd.sh status
+
 MsfRpcd: Running
 
 ./msfrpcd.sh stop
+
 MsfRpcd:  Stopped
 
 ./msfrpcd.sh start
+
 MsfRpcd:  Starting
 ........................
 MsfRpcd:  Started
