@@ -17,21 +17,21 @@ python setup.py install
 
 Gerekli paketlerin sisteme kurulmasinin ardindan msfrpc servisinin baslatilmasi gereklidir. Bunun icin paket ile birlikte gelen msfrpcd.sh betigi kullanilabilir. Msfrpc servisinin baslatilmasi icin betik asagida belirtildigi sekilde calistirilmalidir.
 
-./msfrpcd.sh status
+      ./msfrpcd.sh status
 
-MsfRpcd: Running
+      MsfRpcd: Running
 
-./msfrpcd.sh stop
+      ./msfrpcd.sh stop
 
-MsfRpcd:  Stopped
+      MsfRpcd:  Stopped
 
-./msfrpcd.sh start
+      ./msfrpcd.sh start
 
-MsfRpcd:  Starting
+      MsfRpcd:  Starting
 
-........................
+      ........................
 
-MsfRpcd:  Started
+      MsfRpcd:  Started
 
 
 Betik parametre olarak 3 adet dosya almaktadir. 1. olarak hangi kullanicilarin sisteme oturum acmadigi bilgisinin sorgulandigi, 2. olarak hangi kullanici bilgileri ile belirtilen sistemlerde oturum acilip acilmadigi bilgisinin alinacagi xml tabanli yapilandirma dosyasi, 3. ve son olarak ise hangi ip adresleri icin sorgulamalarin gerceklestirilecegi dosya.
