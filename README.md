@@ -9,6 +9,7 @@ Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin as
      # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
  
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
+
      # cd msfrpc-master/python-msfrpc
      # python setup.py install
  
