@@ -1,7 +1,7 @@
 kacak
 =====
 
-USER ENUMARATION
+# USER ENUMARATION
 
 Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin asagidaki adimlar takip edilmelidir.
 
@@ -95,7 +95,7 @@ Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting 
 ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-MIMIKATZ PARSER 
+# MIMIKATZ PARSER 
 
 Mimikatz sonuclarinin parse edilebilmesi icin --mimikatz secenegi aktive edilmistir. Bu seenek yardimi ile sonuclar asagida gosterildigi sekilde parse edilebilmektedir.
 
