@@ -18,19 +18,14 @@ python setup.py install
 Gerekli paketlerin sisteme kurulmasinin ardindan msfrpc servisinin baslatilmasi gereklidir. Bunun icin paket ile birlikte gelen msfrpcd.sh betigi kullanilabilir. Msfrpc servisinin baslatilmasi icin betik asagida belirtildigi sekilde calistirilmalidir.
 
       # ./msfrpcd.sh status
-
       MsfRpcd: Running
 
-      ./msfrpcd.sh stop
-
+      #./msfrpcd.sh stop
       MsfRpcd:  Stopped
 
-      ./msfrpcd.sh start
-
+      #./msfrpcd.sh start
       MsfRpcd:  Starting
-
       ........................
-
       MsfRpcd:  Started
 
 
