@@ -28,7 +28,9 @@ MsfRpcd:  Stopped
 ./msfrpcd.sh start
 
 MsfRpcd:  Starting
+
 ........................
+
 MsfRpcd:  Started
 
 
@@ -98,6 +100,7 @@ Not: Betik hata ayiklama secenegi amacli -v opsiyonu ile calistirilarak debug me
 Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting ile gelistirilmis ayni ise yapan bir betik bulunmaktadir. Bu betik yardimi ilede ayni islem gerceklestirilebilmektedir.
 
 ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
+
 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
 # MIMIKATZ PARSER 
@@ -105,9 +108,13 @@ Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting 
 Mimikatz sonuclarinin parse edilebilmesi icin --mimikatz secenegi aktive edilmistir. Bu seenek yardimi ile sonuclar asagida gosterildigi sekilde parse edilebilmektedir.
 
 ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
+
 Kadi: bayram Parola: bayramSifresi
+
 Kadi: h.unay Parola: h.unaySifresi
+
 Kadi: serkan Parola: serkanSifresi
+
 
 
 
