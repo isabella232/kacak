@@ -1,34 +1,31 @@
 kacak
 =====
 
--  USER ENUMARATION  - 
+USER ENUMARATION
 
 Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin asagidaki adimlar takip edilmelidir.
 
 # apt-get install msgpack-python
- 
 # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
  
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
- 
 # cd msfrpc-master/python-msfrpc
 # python setup.py install
  
 
 Gerekli paketlerin sisteme kurulmasinin ardindan msfrpc servisinin baslatilmasi gereklidir. Bunun icin paket ile birlikte gelen msfrpcd.sh betigi kullanilabilir. Msfrpc servisinin baslatilmasi icin betik asagida belirtildigi sekilde calistirilmalidir.
 
-# ./msfrpcd.sh status
+./msfrpcd.sh status
 MsfRpcd: Running
 
-# ./msfrpcd.sh stop
+./msfrpcd.sh stop
 MsfRpcd:  Stopped
 
-# ./msfrpcd.sh start
+./msfrpcd.sh start
 MsfRpcd:  Starting
 ........................
 MsfRpcd:  Started
 
- 
 
 Betik parametre olarak 3 adet dosya almaktadir. 1. olarak hangi kullanicilarin sisteme oturum acmadigi bilgisinin sorgulandigi, 2. olarak hangi kullanici bilgileri ile belirtilen sistemlerde oturum acilip acilmadigi bilgisinin alinacagi xml tabanli yapilandirma dosyasi, 3. ve son olarak ise hangi ip adresleri icin sorgulamalarin gerceklestirilecegi dosya.
 
@@ -108,16 +105,11 @@ Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting 
 # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
- 
-
- 
-
--  MIMIKATZ PARSER - 
+MIMIKATZ PARSER 
 
 Mimikatz sonuclarinin parse edilebilmesi icin --mimikatz secenegi aktive edilmistir. Bu seenek yardimi ile sonuclar asagida gosterildigi sekilde parse edilebilmektedir.
 
 # ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
-Kadi: n.pinar Parola: QluSifre
 Kadi: bayram Parola: bayramSifresi
 Kadi: h.unay Parola: h.unaySifresi
 Kadi: serkan Parola: serkanSifresi
