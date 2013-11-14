@@ -12,8 +12,7 @@ fi
 function start()
 {
 	echo "$(tput bold)$(tput setaf 4)MsfRpcd: $(tput bold)$(tput setaf 2) Starting"
-	#$msfrpcd -a 127.0.0.1 -U msf -P msf -p 55552 -S >/dev/null 2&>1
-	$msfrpcd -a 127.0.0.1 -U msf -P msf -p 55552 -S 
+	$msfrpcd -a 127.0.0.1 -U msf -P msf -p 55552 -S >/dev/null 2&>1
         while [ 1 ]
         do
                 is_start="`netstat -nlput | grep 55552 | grep -v grep`"
