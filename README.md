@@ -1,7 +1,7 @@
 KACAK
 =====
 
-Kacak sızma testleri esnasında windows ağları için belirli yeteneklere sahip bir araçtır. Geliştirilmesi devam etmekte
+Kacak sızma testleri esnasında kullanılmak üzere windows ağları için belirli yeteneklere sahip geliştirilmiş bir araçtır. Geliştirilmesi devam etmekte
 olan bu sürüm yetenekleri olarak;
  - Kurum domain yapısı üzerinde belirtilen kullanıcıların oturum bilgisinin tespit edilebilmesi
  - Mimikatz sonuçlarının raporlanabilmesi
