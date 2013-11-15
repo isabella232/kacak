@@ -33,7 +33,7 @@ do
                 echo -e "Kadi:$username -> " | tr -d "\n" >> $tmp_file
         fi
 
-        if [ ! -z "$password" ] && [ ! "$password" == " (null)" ]
+        if [ ! -z "$password" ] && [ ! "$password" == " (null)" ] 
         then
                 echo "Parola:$password"  >> $tmp_file
         fi
