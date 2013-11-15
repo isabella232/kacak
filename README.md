@@ -3,7 +3,7 @@ kacak
 
 # USER ENUMARATION
 
-Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin asagidaki adimlar takip edilmelidir.
+Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
      # apt-get install msgpack-python
      # cd /tmp
@@ -15,7 +15,9 @@ Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin as
      # cd msfrpc-master/python-msfrpc
      # python setup.py install
  
-Gerekli paketlerin sisteme kurulmasinin ardindan msfrpc servisinin baslatilmasi gereklidir. Bunun icin paket ile birlikte gelen msfrpcd.sh betigi kullanilabilir. Msfrpc servisinin baslatilmasi icin betik asagida belirtildigi sekilde calistirilmalidir.
+Gerekli paketlerin sisteme kurulmasının ardından "msfrpc" servisinin başlatılması gereklidir. Bunun için paket ile 
+birlikte gelen "msfrpcd.sh" betiği kullanılabilir. Msfrpc servisinin başlatılması için betik aşğıda belirtildiği şekilde 
+çalıştırılmalıdır. Bu betik 55552 portunda 
 
       # ./msfrpcd.sh status
       MsfRpcd: Running
