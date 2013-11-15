@@ -5,7 +5,7 @@ __VERSION__ = '0.1'
 __AUTHOR__ = 'Galkan'
 __DATE__ = '10.10.2013'
 
-
+ 
 try:
     	import sys
 	import re
