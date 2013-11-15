@@ -33,7 +33,7 @@ function main()
 	smbpass="$4"
 	smbuser="$5"
 	threads="$6"
-
+ 
 	output_file="`mktemp /tmp/$USER.XXXXXX`"
 
 	$msfcli auxiliary/scanner/smb/smb_enumusers_domain RHOSTS=file:$rhosts SMBDomain=$smbdomain SMBPass=$smbpass  SMBUser=$smbuser THREADS=$threads E >$output_file 2>$output_file
