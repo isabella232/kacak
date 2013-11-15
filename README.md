@@ -1,4 +1,4 @@
-## KACAK
+KACAK
 =====
 
 Kacak sızma testleri esnasında windows ağları için belirli yeteneklere sahip bir araçtır. Geliştirilmesi devam etmekte
@@ -81,7 +81,7 @@ sorgulamanın gerçekleştirileceği dosya kullanılmaktadır.
      </domain-admin>
 
 
-NOT: Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
+##### NOT: Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
 mesaji alıacaktır. Bu durum yapılandırma dosyası için geçerli değildir. Örneğin "/usr/local/data/users.txt" gibi.
 
 Kullanıcı oturum açma tespit etme özelliği için "--domain" opsiyonu ile çalıştırılmalıdır. Örnek bir kullanım aşağıda gösterildiği gibi 
@@ -95,8 +95,7 @@ olmaktadır.
      [+] Domain: Sirket
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-##### NOT: 
-Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
+##### NOT: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
 modu olarak 3 seviye bulunmaktadır. 1 en düşük 3 ise en yüksek seviye olarak belirtilmektedir. Örnek bir kullanım 
 aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ayıklama mesajlarına ilişkin satırlardır.
 
