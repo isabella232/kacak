@@ -14,7 +14,9 @@ Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için
      # apt-get install msgpack-python
      # cd /tmp
      # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
-     
+
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image1.png)
+
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 
      # unzip master.zip
