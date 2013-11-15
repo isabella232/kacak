@@ -81,10 +81,10 @@ sorgulamanın gerçekleştirileceği dosya kullanılmaktadır.
      </domain-admin>
 
 
-##### NOT: Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
-##### mesaji alıacaktır. Bu durum yapılandırma dosyası için geçerli değildir. Örneğin "/usr/local/data/users.txt" gibi.
-##### Kullanıcı oturum açma tespit etme özelliği için "--domain" opsiyonu ile çalıştırılmalıdır. Örnek bir kullanım aşağıda gösterildiği gibi 
-##### olmaktadır.
+NOT: Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
+mesaji alıacaktır. Bu durum yapılandırma dosyası için geçerli değildir. Örneğin "/usr/local/data/users.txt" gibi.
+Kullanıcı oturum açma tespit etme özelliği için "--domain" opsiyonu ile çalıştırılmalıdır. Örnek bir kullanım aşağıda gösterildiği gibi 
+olmaktadır.
 
      # ./kacak.py --domain /root/sld_kacak/kacak/data/users.txt config/config.xml /root/sld_kacak/kacak/data/ip_file.txt
 
