@@ -17,7 +17,13 @@ Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için
  
 Gerekli paketlerin sisteme kurulmasının ardından "msfrpc" servisinin başlatılması gereklidir. Bunun için paket ile 
 birlikte gelen "msfrpcd.sh" betiği kullanılabilir. Msfrpc servisinin başlatılması için betik aşğıda belirtildiği şekilde 
-çalıştırılmalıdır. Bu betik 55552 portunda 
+çalıştırılmalıdır. Bu betik 55552 portunda msfrpc servisinin çalıştırılmasını betik içerisindeki gömülü kullanıcı adı
+parola bilgisi ile başlatmaktadır. Daha önceden bu servisin farklı bir kullanıcı adı/parola bilgisi ile çalıştırılması 
+olasılığına karşın kontrol edilmelidir. Bu işlem netstat komutu yardımı ile belirtilen şekilde kontrol edilebilmektedir.
+     
+      # netstat -nlput | grep 55552 | grep -v grep     
+
+Bu adım doğrulandıktan sonra betik aşağıda belirtildiği şekilde yönetilebilmektedir.
 
       # ./msfrpcd.sh status
       MsfRpcd: Running
@@ -30,17 +36,27 @@ birlikte gelen "msfrpcd.sh" betiği kullanılabilir. Msfrpc servisinin başlatı
       ..................
       MsfRpcd:  Started
 
-Betik parametre olarak 3 adet dosya almaktadir. 1. olarak hangi kullanicilarin sisteme oturum acmadigi bilgisinin sorgulandigi, 2. olarak hangi kullanici bilgileri ile belirtilen sistemlerde oturum acilip acilmadigi bilgisinin alinacagi xml tabanli yapilandirma dosyasi, 3. ve son olarak ise hangi ip adresleri icin sorgulamalarin gerceklestirilecegi dosya.
+Kullanım için parametre olarak 3 adet dosya kullanılmaktadır. 1. parametre olarak hangi kullanıcıların sisteme oturum 
+açtığı bilgisinin sorgulanacağı dosya, 2. parametre olarak hangi kullanıcı bilgileri ile belirtilen sistemlerde oturum 
+açılıp açılmadığı bilgisinin alınacağı "xml" tabanlı yapılandırma dosyası, 3. parametre ilede hangi ip adresleri için 
+sorgulamanın gerçekleştirileceği dosya kullanılmaktadır.
 
-     - <user_file>: Bu dosya icerisinde hangi kullanicilarin aranacagi bilgisi yer almalidir. Her bir satirda Domain\Kullanici_Adi seklinde  belirtim gerceklestirilmelidir. Ornegin;
+     - <user_file>: Bu dosya içerisinde hangi kullanıcıların aranacağı bilgisi yer almalıdır. Her bir satırda 
+     "Domain\Kullanıcı_Adı" şeklinde  belirtim gerçekleştirilebilir. Örnek bir içerik aşağıda gösterilmiştir.
+     
      Sirket\YoneticiKullanici
      Workgroup\Administrator
 
-     - <ip_file>: Bu dosya icerisinde hangi ip adreslerinin aranacagi belirtilmektedir. Metasploit formatinda kabul edilen tum ip adres yazilis bicimleri gecerli olmaktadir. Ornegin
+     - <ip_file>: Bu dosya içerisinde hangi ip adreslerinin aranacağı belirtilmektedir. Metasploit formatında kabul 
+     edilen tüm ip adres yazım formatı geçerli olmaktadır. Örnek bir içerik aşağıda gösterilmiştir.
+     
      192.168.100.100
      192.168.100.111
 
-     - <config_file>: Bu dosya icerisinde hangi kullanici bilgileri ile belirtilen sistemlere oturum acilip acilmayacagi bilgisi bulunmaktadir. Istenilen sayida kullanici bilgileri icin belirtimler gerceklestirilebilir. Domain adi, Kullanici adi, Kullanici parolasi ve acilacak thread sayisi asagida gosterildigi sekilde belirtilmelidir.
+     - <config_file>: Bu dosya içerisinde hangi kullanıcı bilgileri ile belirtilen sistemlere oturum açılıp açılmayacağı
+     bilgisi bulunmaktadır. İstenilen sayıda kullanıcı bilgileri için belirtimler gerçekleştirilebilir. Domain Adı, 
+     Kullanıcı Adı, Kullanıcı Parola bilgisi ve kullanılmak istenen "thread" sayısının belirtimleri kullanılmaktadır.
+     Örnek bir içerik aşağıda gösterilmiştir.
 
      <?xml version="1.0"?>
      <domain-admin>
@@ -59,9 +75,11 @@ Betik parametre olarak 3 adet dosya almaktadir. 1. olarak hangi kullanicilarin s
      </domain-admin>
 
 
-Not: Belirtilen dosyalar icerisinde users_file ve ip_file dosyalari icin  tam yol belirtilmelidir. Aksi halde hata mesaji alinacaktir. Bu durum yapilandirma dosyasi icin gecerli degildir. Ornegin /usr/local/data/users.txt gibi.
+Not: Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
+mesaji alıacaktır. Bu durum yapılandırma dosyası için geçerli değildir. Örneğin "/usr/local/data/users.txt" gibi.
 
-User enumaration ozelligi icin betik --domain opsiyonu ile calistirilmalidir. Ornek bir kullanim asagida gosterildigi gibi olmaktadir.
+User enumaration özelliği için "--domain" opsiyonu ile çalıştırılmalıdır. Örnek bir kullanım aşağıda gösterildiği gibi 
+olmaktadır.
 
      # ./kacak.py --domain /root/sld_kacak/kacak/data/users.txt config/config.xml /root/sld_kacak/kacak/data/ip_file.txt
 
@@ -71,7 +89,9 @@ User enumaration ozelligi icin betik --domain opsiyonu ile calistirilmalidir. Or
      [+] Domain: Sirket
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-Not: Betik hata ayiklama secenegi amacli -v opsiyonu ile calistirilarak debug mesajlari verebilmektedir. Hata ayiklama modu olarak 3 seviye bulunmaktadir. 1 en dusuk 3 ise en yuksek seviye olarak goze carpmaktadir. Ornek bir kullanim asagida gosterildigi gibi olmaktadir. [-] ile baslayan satirlar hata ayiklama mesajlarina iliskin satirlardir.
+Not: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
+modu olarak 3 seviye bulunmaktadır. 1 en düşük 3 ise en yüksek seviye olarak belirtilmektedir. Örnek bir kullanım 
+aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ayıklama mesajlarına ilişkin satırlardır.
 
      # ./kacak.py --domain /root/sld_kacak/kacak/data/users.txt /root/sld_kacak/kacak/config/config.xml /root/sld_kacak/kacak/data/ip_file.txt
 
@@ -93,7 +113,8 @@ Not: Betik hata ayiklama secenegi amacli -v opsiyonu ile calistirilarak debug me
      [ - ]  Commands -->  ['use auxiliary/scanner/smb/smb_enumusers_domain\n', 'set RHOSTS file:/root/sld_kacak/kacak/data/ip_file.txt\n', 'set THREADS 10\n', 'set SMBPass Aa123456\n', 'set SMBUser Saldirgan\n', 'set SMBDomain Sirket\n', 'run\n']
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting ile gelistirilmis ayni ise yapan bir betik bulunmaktadir. Bu betik yardimi ilede ayni islem gerceklestirilebilmektedir.
+Not: test dizini altında hata ayıklama ve kontrol amaçli olarak "bash script" ile geliştirilmiş aynı işi gerçekleştirien
+bir betik bulunmaktadır. Olası durumlarda bu betik yardımı ilede aynı işlem gerçekleştirilebilmektedir.
      
      # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
      192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
@@ -101,7 +122,9 @@ Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting 
 
 # MIMIKATZ PARSER 
 
-Mimikatz sonuclarinin parse edilebilmesi icin --mimikatz secenegi aktive edilmistir. Bu seenek yardimi ile sonuclar asagida gosterildigi sekilde parse edilebilmektedir.
+Mimikatz sonuçlarının ayrıştırılabilmesi için "--mimikatz" seçeneği kullanılmaktadır. Bu seçenek yardımı ile sonuçlar
+kolayca raporlanabilmektedir. Mimikatz ile elde edilen örnek bir çıktının raporlanmasına dair örnek bir kullanım ve
+çıktı aşağıda gösterildiği gibi olmaktadır.
 
      # ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
      Kadi: galkan Parola: galkan Sifresi
