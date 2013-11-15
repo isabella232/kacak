@@ -10,10 +10,10 @@ olan bu sürüm yetenekleri olarak;
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
-     ```# apt-get install msgpack-python
+     # apt-get install msgpack-python
      # cd /tmp
      # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
-     ```
+     
  
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 
@@ -81,10 +81,10 @@ sorgulamanın gerçekleştirileceği dosya kullanılmaktadır.
      </domain-admin>
 
 
-Not: Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
+#NOT:# Belirtilen dosyalar içerisinde "users_file" ve "ip_file" dosyaları için  tam yol belirtilmelidir. Aksi halde hata 
 mesaji alıacaktır. Bu durum yapılandırma dosyası için geçerli değildir. Örneğin "/usr/local/data/users.txt" gibi.
 
-User enumaration özelliği için "--domain" opsiyonu ile çalıştırılmalıdır. Örnek bir kullanım aşağıda gösterildiği gibi 
+Kullanıcı oturum açma tespit etme özelliği için "--domain" opsiyonu ile çalıştırılmalıdır. Örnek bir kullanım aşağıda gösterildiği gibi 
 olmaktadır.
 
      # ./kacak.py --domain /root/sld_kacak/kacak/data/users.txt config/config.xml /root/sld_kacak/kacak/data/ip_file.txt
@@ -95,7 +95,7 @@ olmaktadır.
      [+] Domain: Sirket
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-Not: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
+NOT: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
 modu olarak 3 seviye bulunmaktadır. 1 en düşük 3 ise en yüksek seviye olarak belirtilmektedir. Örnek bir kullanım 
 aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ayıklama mesajlarına ilişkin satırlardır.
 
@@ -119,7 +119,7 @@ aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ay�
      [ - ]  Commands -->  ['use auxiliary/scanner/smb/smb_enumusers_domain\n', 'set RHOSTS file:/root/sld_kacak/kacak/data/ip_file.txt\n', 'set THREADS 10\n', 'set SMBPass Aa123456\n', 'set SMBUser Saldirgan\n', 'set SMBDomain Sirket\n', 'run\n']
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-Not: test dizini altında hata ayıklama ve kontrol amaçli olarak "bash script" ile geliştirilmiş aynı işi gerçekleştirien
+NOT: test dizini altında hata ayıklama ve kontrol amaçli olarak "bash script" ile geliştirilmiş aynı işi gerçekleştirien
 bir betik bulunmaktadır. Olası durumlarda bu betik yardımı ilede aynı işlem gerçekleştirilebilmektedir.
      
      # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
