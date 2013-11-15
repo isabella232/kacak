@@ -33,7 +33,7 @@ class DoMain:
 
         	msf = MetaSploit(self.ip_file, self.verbose_opt)
         	user_cred = msf.parse_config_file(self.config_file)
-
+ 
 
 		if self.verbose_opt >= 1:
 			msf.verbose("Config File's Options", user_cred)
