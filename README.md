@@ -135,7 +135,7 @@ kolayca raporlanabilmektedir. Mimikatz ile elde edilen örnek bir çıktının r
      Kadi: galkan Parola: galkan Sifresi
      Kadi: alkan Parola: alkan Sifresi
      
-### TO DO
+### To Do
 
 - MS_08_067 açıklığını taşıyan ip adreslerinin tespit edilebilmesi
 - Windows ağları üzerinde kullanıcıların "nmap" betikleri yardımı ile tespit edilebilmesi 
