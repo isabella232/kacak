@@ -100,6 +100,5 @@ Not: test dizini altinda hata ayiklama ve kontrol amacli olarak bash scrripting 
 Mimikatz sonuclarinin parse edilebilmesi icin --mimikatz secenegi aktive edilmistir. Bu seenek yardimi ile sonuclar asagida gosterildigi sekilde parse edilebilmektedir.
 
      # ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
-     Kadi: bayram Parola: bayramSifresi
-     Kadi: h.unay Parola: h.unaySifresi
-     Kadi: serkan Parola: serkanSifresi
+     Kadi: galkan Parola: galkan Sifresi
+     Kadi: alkan Parola: alkan Sifresi
