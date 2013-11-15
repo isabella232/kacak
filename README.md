@@ -6,9 +6,8 @@ olan bu sürüm yetenekleri olarak;
  - Kurum domain yapısı üzerinde belirtilen kullanıcıların oturum bilgisinin tespit edilebilmesi
  - Mimikatz sonuçlarının raporlanabilmesi
 
-<dl>
-  dt>Kullanıcı Oturum Bilgilerinin Tespit Edilmesi</dt>
-</dl>
+
+# Kullanıcı Oturum Bilgilerinin Tespit Edilmesi
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
@@ -16,7 +15,6 @@ Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için
      # cd /tmp
      # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
      
- 
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 
      # unzip master.zip
