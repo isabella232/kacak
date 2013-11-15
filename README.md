@@ -6,10 +6,12 @@ kacak
 Kurulum oncesi gerekli paketlerin sisteme kurulmasi gerekmektedir. Bunun icin asagidaki adimlar takip edilmelidir.
 
      # apt-get install msgpack-python
+     # cd /tmp
      # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
  
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 
+     # unzip master.zip
      # cd msfrpc-master/python-msfrpc
      # python setup.py install
  
@@ -18,12 +20,12 @@ Gerekli paketlerin sisteme kurulmasinin ardindan msfrpc servisinin baslatilmasi 
       # ./msfrpcd.sh status
       MsfRpcd: Running
 
-      #./msfrpcd.sh stop
+      # ./msfrpcd.sh stop
       MsfRpcd:  Stopped
 
       #./msfrpcd.sh start
       MsfRpcd:  Starting
-      ........................
+      ..................
       MsfRpcd:  Started
 
 Betik parametre olarak 3 adet dosya almaktadir. 1. olarak hangi kullanicilarin sisteme oturum acmadigi bilgisinin sorgulandigi, 2. olarak hangi kullanici bilgileri ile belirtilen sistemlerde oturum acilip acilmadigi bilgisinin alinacagi xml tabanli yapilandirma dosyasi, 3. ve son olarak ise hangi ip adresleri icin sorgulamalarin gerceklestirilecegi dosya.
