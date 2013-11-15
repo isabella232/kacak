@@ -10,9 +10,10 @@ olan bu sürüm yetenekleri olarak;
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
-     # apt-get install msgpack-python
+     ```# apt-get install msgpack-python
      # cd /tmp
      # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
+     ```
  
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 
