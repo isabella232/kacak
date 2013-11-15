@@ -6,7 +6,9 @@ olan bu sürüm yetenekleri olarak;
  - Kurum domain yapısı üzerinde belirtilen kullanıcıların oturum bilgisinin tespit edilebilmesi
  - Mimikatz sonuçlarının raporlanabilmesi
 
-# Kullanıcı Oturum Bilgilerinin Tespit Edilmesi
+<dl>
+  dt>Kullanıcı Oturum Bilgilerinin Tespit Edilmesi</dt>
+</dl>
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
