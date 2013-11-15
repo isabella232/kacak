@@ -12,16 +12,22 @@ olan bu sürüm yetenekleri olarak;
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
      # apt-get install msgpack-python
-     # cd /tmp
-     # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
-
+     
 ![alt tag](https://raw.github.com/galkan/kacak/master/images/image1.png)
 
 İndirilen dosya (master.zip) zip dosyasından çıkarılır
 
+     # cd /tmp
+     # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
+
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image2.png)
+
      # unzip master.zip
      # cd msfrpc-master/python-msfrpc
      # python setup.py install
+     
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image3.png)
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image4.png)
  
 Gerekli paketlerin sisteme kurulmasının ardından "msfrpc" servisinin başlatılması gereklidir. Bunun için paket ile 
 birlikte gelen "msfrpcd.sh" betiği kullanılabilir. Msfrpc servisinin başlatılması için betik aşğıda belirtildiği şekilde 
@@ -43,6 +49,8 @@ Bu adım doğrulandıktan sonra betik aşağıda belirtildiği şekilde yönetil
       MsfRpcd:  Starting
       ..................
       MsfRpcd:  Started
+
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image5.png)
 
 Kullanım için parametre olarak 3 adet dosya kullanılmaktadır. 1. parametre olarak hangi kullanıcıların sisteme oturum 
 açtığı bilgisinin sorgulanacağı dosya, 2. parametre olarak hangi kullanıcı bilgileri ile belirtilen sistemlerde oturum 
@@ -96,6 +104,8 @@ olmaktadır.
      [+] Domain: Sirket
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image6.png)
+
 NOT: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
 modu olarak 3 seviye bulunmaktadır. 1 en düşük 3 ise en yüksek seviye olarak belirtilmektedir. Örnek bir kullanım 
 aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ayıklama mesajlarına ilişkin satırlardır.
@@ -119,6 +129,8 @@ aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ay�
      [+] Domain: Sirket
      [ - ]  Commands -->  ['use auxiliary/scanner/smb/smb_enumusers_domain\n', 'set RHOSTS file:/root/sld_kacak/kacak/data/ip_file.txt\n', 'set THREADS 10\n', 'set SMBPass Aa123456\n', 'set SMBUser Saldirgan\n', 'set SMBDomain Sirket\n', 'run\n']
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
+          
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image7.png)
 
 NOT: test dizini altında hata ayıklama ve kontrol amaçli olarak "bash script" ile geliştirilmiş aynı işi gerçekleştirien
 bir betik bulunmaktadır. Olası durumlarda bu betik yardımı ilede aynı işlem gerçekleştirilebilmektedir.
@@ -126,6 +138,7 @@ bir betik bulunmaktadır. Olası durumlarda bu betik yardımı ilede aynı işle
      # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
      192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
+![alt tag](https://raw.github.com/galkan/kacak/master/images/image8.png)
 
 ### Mimikatz Sonuçlarının Raporlanması
 
