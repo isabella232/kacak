@@ -28,7 +28,7 @@ Duruma ait örnek ekran görüntüsü belirtildiği şekilde olmaktadır.
      # cd msfrpc-master/python-msfrpc
      # python setup.py install
 
-Duruma ait örnek ekran görüntüsü belirtildiği şekilde olmaktadır.         
+Duruma ait örnek ekran görüntüleri belirtildiği şekilde olmaktadır.         
 ![alt tag](https://raw.github.com/galkan/kacak/master/images/image3.png)
 ![alt tag](https://raw.github.com/galkan/kacak/master/images/image4.png)
  
