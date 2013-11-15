@@ -7,6 +7,9 @@ olan bu sürüm yetenekleri olarak;
  - Mimikatz sonuçlarının raporlanabilmesi
 
 
+NOT: Burada anlatılanlar Kali Linux dağıtımında uygulanmıştır. Diğer sistemler için test edilmemiştir ancak muhtemelen 
+aynı adımlar ile uygulanması mümkündür.
+
 ### Kullanıcı Oturum Bilgilerinin Tespit Edilmesi
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
