@@ -1,7 +1,12 @@
 kacak
 =====
 
-# USER ENUMARATION
+Kacak sızma testleri esnasında windows ağları için belirli yeteneklere sahip bir araçtır. Geliştirilmesi devam etmekte
+olan bu sürüm yetenekleri olarak;
+ - Kurum domain yapısı üzerinde belirtilen kullanıcıların oturum bilgisinin tespit edilebilmesi
+ - Mimikatz sonuçlarının raporlanabilmesi
+
+# Kullanıcı Oturum Tespit Edilmesi
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
@@ -120,7 +125,7 @@ bir betik bulunmaktadır. Olası durumlarda bu betik yardımı ilede aynı işle
      192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
 
-# MIMIKATZ PARSER 
+# Mimikatz Sonuçlarının Raporlanması
 
 Mimikatz sonuçlarının ayrıştırılabilmesi için "--mimikatz" seçeneği kullanılmaktadır. Bu seçenek yardımı ile sonuçlar
 kolayca raporlanabilmektedir. Mimikatz ile elde edilen örnek bir çıktının raporlanmasına dair örnek bir kullanım ve
@@ -129,3 +134,9 @@ kolayca raporlanabilmektedir. Mimikatz ile elde edilen örnek bir çıktının r
      # ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
      Kadi: galkan Parola: galkan Sifresi
      Kadi: alkan Parola: alkan Sifresi
+     
+# TO DO
+
+- MS_08_067 açıklığını taşıyan ip adreslerinin tespit edilebilmesi
+- Windows ağları üzerinde kullanıcıların "nmap" betikleri yardımı ile tespit edilebilmesi 
+
