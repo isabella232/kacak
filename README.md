@@ -1,4 +1,4 @@
-kacak
+## KACAK
 =====
 
 Kacak sızma testleri esnasında windows ağları için belirli yeteneklere sahip bir araçtır. Geliştirilmesi devam etmekte
@@ -7,7 +7,7 @@ olan bu sürüm yetenekleri olarak;
  - Mimikatz sonuçlarının raporlanabilmesi
 
 
-#### Kullanıcı Oturum Bilgilerinin Tespit Edilmesi
+### Kullanıcı Oturum Bilgilerinin Tespit Edilmesi
 
 Kurulum öncesi gerekli paketlerin sisteme kurulması gerekmektedir. Bunun için aşağıdaki adımlar takip edilmelidir.
 
@@ -95,7 +95,8 @@ olmaktadır.
      [+] Domain: Sirket
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-NOT: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
+##### NOT: 
+Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
 modu olarak 3 seviye bulunmaktadır. 1 en düşük 3 ise en yüksek seviye olarak belirtilmektedir. Örnek bir kullanım 
 aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ayıklama mesajlarına ilişkin satırlardır.
 
@@ -126,7 +127,7 @@ bir betik bulunmaktadır. Olası durumlarda bu betik yardımı ilede aynı işle
      192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
 
-#### Mimikatz Sonuçlarının Raporlanması
+### Mimikatz Sonuçlarının Raporlanması
 
 Mimikatz sonuçlarının ayrıştırılabilmesi için "--mimikatz" seçeneği kullanılmaktadır. Bu seçenek yardımı ile sonuçlar
 kolayca raporlanabilmektedir. Mimikatz ile elde edilen örnek bir çıktının raporlanmasına dair örnek bir kullanım ve
