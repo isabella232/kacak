@@ -94,7 +94,7 @@ olmaktadır.
      [+] Domain: Sirket
           [+] 192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
-##### NOT: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
+NOT: Betik hata ayıklama seçeneği amaçlı "-v" opsiyonu ile çaıştırılarak debug mesajları verebilmektedir. Hata ayıklama 
 modu olarak 3 seviye bulunmaktadır. 1 en düşük 3 ise en yüksek seviye olarak belirtilmektedir. Örnek bir kullanım 
 aşağıda gösterildiği gibi olmaktadır. [-] ile başlayan satırlar hata ayıklama mesajlarına ilişkin satırlardır.
 
@@ -135,7 +135,7 @@ kolayca raporlanabilmektedir. Mimikatz ile elde edilen örnek bir çıktının r
      Kadi: galkan Parola: galkan Sifresi
      Kadi: alkan Parola: alkan Sifresi
      
-# TO DO
+### TO DO
 
 - MS_08_067 açıklığını taşıyan ip adreslerinin tespit edilebilmesi
 - Windows ağları üzerinde kullanıcıların "nmap" betikleri yardımı ile tespit edilebilmesi 
