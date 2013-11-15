@@ -29,7 +29,7 @@ function start()
         echo ""
         echo "$(tput bold)$(tput setaf 4)MsfRpcd: $(tput bold)$(tput setaf 2) Started"
 }
-
+ 
 function status()
 {
 	proc="`netstat -nlput | grep 55552 | grep -v grep`"
