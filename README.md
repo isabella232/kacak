@@ -99,9 +99,12 @@ Yet another one;
 
 If you have any problem or want to debug with an extra tool, you can use test_kacak.sh which is located in the kacak files. 
 
-An extra debugging script for kacak,
+An extra debugging script for kacak;
+
+
     # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
       192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
+
 
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image8.png "An extra debugging script for kacak")
 
