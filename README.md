@@ -63,6 +63,9 @@ Other file named users_file  is used for the users you want to enumarate. It mus
     Workgroup\Administrator
  
 And the last one is which you want to scan network named ip_file. You can also use cidr notiation.
+
+    192.168.100.100
+    192.168.100.111
  
 ATTENTION: "users_file" and "ip_file" files must HAVE THE full path. Otherwise kacak can't enumarate users properly. Metasploit module needs the full path of these files.
 
