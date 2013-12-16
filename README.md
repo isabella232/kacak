@@ -19,7 +19,14 @@ At first, install the needed libraries. Please follow the instructions given bel
     # cd msfrpc-master/python-msfrpc
     # python setup.py install
 
+First step,
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image1.png "Install needed libraries")
+
+Second step,
+
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image2.png "Install needed libraries")
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image3.png "Install needed libraries")
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image4.png "Install needed libraries")
 
 Once the installation of libraries were completed, msfrpcd service must be restarted. In order to do this you can use a script which is located in the kacak files named msfrpcd.sh.  Prior  to this script, check whether the 55552 port number is open or not. Make sure that it is closed.
 
@@ -36,6 +43,9 @@ There are 3 ways of using this script as shown below;
       MsfRpcd:  Starting
       ..................
       MsfRpcd:  Started
+
+Script for managing msfrpcd service,
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image5.png "script for managing msfrpcd service")
   
 And be sure that 55552 port number is open after that.
 
@@ -71,10 +81,21 @@ And the last one is which you want to scan network named ip_file. You can also u
  
 ATTENTION: "users_file" and "ip_file" files must HAVE THE full path. Otherwise kacak can't enumarate users properly. Metasploit module needs the full path of these files.
 
+
+An example screenshot,
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image6.png "An extra debugging script for kacak")
+
+Yet another one,
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image7.png "An extra debugging script for kacak")
+
+
 If you have any problem or want to debug with an extra tool, you can use test_kacak.sh which is located in the kacak files. 
- 
+
+An extra debugging script for kacak,
     # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
       192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
+
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image8.png "An extra debugging script for kacak")
 
     --mimikatz options is used to parse mimikatz results. 
 
