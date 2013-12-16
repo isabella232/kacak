@@ -102,13 +102,13 @@ If you have any problem or want to debug with an extra tool, you can use test_ka
 An extra debugging script for kacak;
 
 
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image8.png "An extra debugging script for kacak")
+
     # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
       192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
 
 
-![Alt text](https://raw.github.com/galkan/kacak/master/images/image8.png "An extra debugging script for kacak")
-
-    --mimikatz options is used to parse mimikatz results. 
+--mimikatz options is used to parse mimikatz results. 
 
     # ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
         Kadi: galkan Parola: galkan's password
