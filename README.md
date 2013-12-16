@@ -19,7 +19,7 @@ At first, install the needed libraries. Please follow the instructions given bel
     # cd msfrpc-master/python-msfrpc
     # python setup.py install
 
-First step,
+First step;
 
 
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image1.png "Install needed libraries")
@@ -46,7 +46,9 @@ There are 3 ways of using this script as shown below;
       ..................
       MsfRpcd:  Started
 
-Script for managing msfrpcd service,
+Script for managing msfrpcd service;
+
+
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image5.png "script for managing msfrpcd service")
   
 And be sure that 55552 port number is open after that.
@@ -84,10 +86,14 @@ And the last one is which you want to scan network named ip_file. You can also u
 ATTENTION: "users_file" and "ip_file" files must HAVE THE full path. Otherwise kacak can't enumarate users properly. Metasploit module needs the full path of these files.
 
 
-An example screenshot,
+An example screenshot;
+
+
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image6.png "An extra debugging script for kacak")
 
-Yet another one,
+Yet another one;
+
+
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image7.png "An extra debugging script for kacak")
 
 
