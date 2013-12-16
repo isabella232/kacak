@@ -86,7 +86,7 @@ And the last one is which you want to scan network named ip_file. You can also u
 ATTENTION: "users_file" and "ip_file" files must HAVE THE full path. Otherwise kacak can't enumarate users properly. Metasploit module needs the full path of these files.
 
 
-An example screenshot;
+An example screenshot for running kacak;
 
 
 ![Alt text](https://raw.github.com/galkan/kacak/master/images/image6.png "An extra debugging script for kacak")
