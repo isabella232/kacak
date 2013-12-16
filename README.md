@@ -19,7 +19,7 @@ At first, install the needed libraries. Please follow the instructions given bel
     # cd msfrpc-master/python-msfrpc
     # python setup.py install
 
-![Alt text](https://github.com/galkan/kacak/tree/master/images "Install needed libraries")
+![Alt text](https://raw.github.com/galkan/kacak/master/images/image1.png "Install needed libraries")
 
 Once the installation of libraries were completed, msfrpcd service must be restarted. In order to do this you can use a script which is located in the kacak files named msfrpcd.sh.  Prior  to this script, check whether the 55552 port number is open or not. Make sure that it is closed.
 
