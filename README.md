@@ -35,6 +35,7 @@ Once the installation of libraries were completed, msfrpcd service must be resta
     # netstat -nlput | grep 55552 | grep -v grep     
 
 There are 3 ways of using this script as shown below;
+
     # ./msfrpcd.sh status
       MsfRpcd: Running
  
