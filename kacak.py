@@ -1,13 +1,13 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
-__VERSION__ = '0.1'
+__VERSION__ = '2.0'
 __AUTHOR__ = 'Galkan'
-__DATE__ = '10.10.2013'
+__DATE__ = '2014'
 
 
 try:
 	import sys
+	from lib.version import *
 	from lib.main import Main
 except ImportError,e:
         import sys
@@ -19,5 +19,11 @@ except ImportError,e:
 ##
 
 if __name__ == "__main__":
-	main = Main()
-	main.run()
+	try:
+	    main = Main()
+	    main.run()
+	except KeyboardInterrupt:
+            print message
+            sys.exit(2)
+
+	    
