@@ -3,39 +3,59 @@ KACAK
 
 ATTENTION: Most updated version can be accessed using this link http://www.galkan.net/2014/01/enumerate-users-for-windows-based-networks.html
 
-Kacak is a tool that can enumerate users specified in the configuration file for windows based networks. It uses metasploit smb_enumusers_domain module in order to achieve this via msfrpcd service. If you are wondering what the msfrpcd service is, please look at the https://github.com/rapid7/metasploit-framework/blob/master/documentation/msfrpc.txt . It also parse mimikatz results.
-At first, install the needed libraries. Please follow the instructions given below;
-# apt-get install msgpack-python
-# cd /tmp
-# wget https://github.com/SpiderLabs/msfrpc/archive/master.zip
-# unzip master.zip
-# cd msfrpc-master/python-msfrpc
-# python setup.py install
-First step;
-Alt text
-Second step,
-Alt textAlt textAlt text
-Once the installation of libraries were completed, msfrpcd service must be restarted. In order to do this you can use a script which is located in the kacak files named msfrpcd.sh. Prior to this script, check whether the 55552 port number is open or not. Make sure that it is closed.
-# netstat -nlput | grep 55552 | grep -v grep     
+Kacak is a tool that can enumerate users specified in the configuration file for windows based networks. It uses metasploit *smb_enumusers_domain* module in order to achieve this via msfrpcd service. 
+ Details about msfrpcd service can be seen from metasploit documentation at  https://github.com/rapid7/metasploit-framework/blob/master/documentation/msfrpc.txt . Kacak also parses mimikatz results.
+
+### Installation 
+
+First install the needed libraries. Please follow the instructions given below;
+
+```
+ # apt-get install msgpack-python  
+ # cd /tmp  
+ # wget https://github.com/SpiderLabs/msfrpc/archive/master.zip  
+ # unzip master.zip  
+ # cd msfrpc-master/python-msfrpc  
+ # python setup.py install  
+```
+
+
+Once the installation of libraries were completed, msfrpcd service must be restarted. In order to do this you can use a script which is located in the kacak files named **msfrpcd.sh**. Prior to this script, check whether if port 55552 is open.  
+```
+ # netstat -nlput | grep 55552 | grep -v grep     
+```
 There are 3 ways of using this script as shown below;
-# ./msfrpcd.sh status
+```
+  # ./msfrpcd.sh status
   MsfRpcd: Running
-
-# ./msfrpcd.sh stop
+```
+```
+ # ./msfrpcd.sh stop
   MsfRpcd:  Stopped
+```
 
-#./msfrpcd.sh start
+```
+ #./msfrpcd.sh start
   MsfRpcd:  Starting
   ..................
   MsfRpcd:  Started
+```
 Script for managing msfrpcd service;
-Alt text
 
-And be sure that 55552 port number is open after that. Kacak can be downloaded from https://github.com/galkan/kacak. 
+And be sure that 55552 port number is open after that. 
 
-# wget https://github.com/galkan/kacak/archive/master.zip
-# unzip master.zip
-In order to use kacak properly, you must use 3 files. with one of the files you should specify the user credentials that can login the target ip addresses. Itis xml based file which is shown below named config_file.
+Download latest kacak version from github.  
+**https://github.com/galkan/kacak.**  
+
+```
+ # wget https://github.com/galkan/kacak/archive/master.zip
+ # unzip master.zip
+```
+In order to use kacak properly, 3 config files should be specified.
+
+First file is used to specify credentials used to login to target machines. 
+with one of the files you should specify the user credentials that can login the target ip addresses. It is xml based file named **config_file** with following syntax:  
+```xml
 <?xml version="1.0"?>
 <domain-admin>
          <domain>
@@ -51,33 +71,41 @@ In order to use kacak properly, you must use 3 files. with one of the files you 
                  <threads>10</threads>
       </domain>
 </domain-admin>
+```
 
-Example file which is shown above has 2 users credentials. Each user credentials must be started with and stopped with .
+Example file which is shown above has 2 users credentials.  
 
-Other file named users_file is used for the users you want to enumarate. It must be like this; "username\domain_name" and If you don’t specify the domain_name, Kacak can't enumarate the users.
-Sirket\YoneticiKullanici
+Seconf config file is **users_file** . It is used to specify users we want to search on target machines. Common use is to search for domain admin users or DB admin users. Syntax is as follows : "**domain_name\username**". Users will not be enumerated if domain_name is not specified.  Example usernames are as follows:  
+```
+Sirket\YoneticiKullanici  
+Workgroup\Administrator  
+```
 
-Workgroup\Administrator
+Third config files is ip_file . It is used to specify target IP addresses in CIDR notation.   
+```
+192.168.100.100  
+192.168.100.111  
+```
 
-And the last one is which you want to scan network named ip_file. You can also use cidr notiation.
-192.168.100.100
-192.168.100.111
+ATTENTION: "**users_file**" and "**ip_file**" files must HAVE THE full path. Otherwise kacak can't enumarate users properly.  
 
-ATTENTION: "users_file" and "ip_file" files must HAVE THE full path. Otherwise kacak can't enumarate users properly. Metasploit module needs the full path of these files.
-
-An example screenshot for running kacak;
-Alt text
-Yet another one;
-Alt text
+An example kacak output:  
+**Resim**  
 
 If you have any problem or want to debug with an extra tool, you can use test_kacak.sh which is located in the kacak files.
 
 An extra debugging script for kacak;
-Alt text
-# ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5
-  192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi
---mimikatz options is used to parse mimikatz results.
-# ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt 
-    Kadi: galkan Parola: galkan's password
-    Kadi: gokhan Parola: gokhan's password
-ATTENTION: It was tested on Kali Linux distribution.
+**Resim**  
+
+```
+ # ./test_kacak.sh ../data/ip_file.txt  ../data/users.txt Sirket Aa123456 Saldirgan 5  
+  192.168.100.101 -> SIRKET\EtkiAlaniYoneticisi  
+```
+**--mimikatz** option can be used to parse mimikatz results.
+```
+ # ./kacak.py --mimikatz /root/sld_kacak/kacak/data/mimikatz.txt  
+    Kadi: galkan Parola: galkan's password  
+    Kadi: gokhan Parola: gokhan's password  
+```
+
+Kacak was developed and tested on Kali Linux distribution.
