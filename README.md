@@ -49,6 +49,9 @@ Download latest kacak version from github.
  # wget https://github.com/galkan/kacak/archive/master.zip
  # unzip master.zip
 ```
+
+### Usage
+
 In order to use kacak properly, 3 config files should be specified.
 
 First file is used to specify credentials used to login to target machines. 
